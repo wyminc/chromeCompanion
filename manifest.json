@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+  "name": "Chrome Companion for the Lonely Surfer",
+  "description": "Does cool things",
+  "version": "1",
+  "author": "theDarkKnight",
+
+  "content_scripts": [
+    {
+      "css": ["main.css"],
+      "js": ["content.js"],
+      "matches": ["*://*/*"]
+    }
+  ],
+
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": "tab-icon.png"
+  },
+
+  "chrome_url_overrides": {
+    "newtab": "newtab.html"
+  },
+
+  "permissions": ["activeTab"]
+}
